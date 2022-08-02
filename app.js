@@ -1,27 +1,42 @@
 function userInfo(){
 
     var userName=prompt("What is your name ?");
+
+   
     var userGender=prompt("what is your Gender");
     var userAge=prompt("Please enter your age");
+
+    while(userAge<1){
+        alert("the gae you entered is less than 1 year , please enter your age again?")
+        var userAge=prompt("Please enter your age");
+
+        
+    }
+
+    
     var userChoice=confirm("Please press ok to display greeting message , else press cancel");
+    
+
+
+
     if (userChoice){
 
         if (userGender=="male"){
 
-           return alert(`Welcome to our website Mr ${userName} `)
+           return alert(`Welcome to our website Mr ${userName} , age : ${userAge}`)
         }
         if (userGender=="female") {
 
-            return alert(`Welcome to our website Ms ${userName} `)
+            return alert(`Welcome to our website Ms ${userName} , age : ${userAge} `)
             
         } else {
-            return alert(`Welcome to our website ${userName} `)
+            return alert(`Welcome to our website ${userName} , age : ${userAge}`)
             
         }
             
         }
+    
     }
-
    
 function extraQuestions(){
 
